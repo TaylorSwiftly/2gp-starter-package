@@ -1,0 +1,25 @@
+{
+  "orgName": "PURCHASE! Package Development Org",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "hasSampleData": true,
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "sessionSettings": {
+        "sessionTimeout": "TwentyFourHours"
+      }
+    },
+    "userManagementSettings": {
+      "enableEnhancedPermsetMgmt": true,
+      "enableEnhancedProfileMgmt": true,
+      "enableNewProfileUI": true,
+      "permsetsInFieldCreation": true
+    } 
+  }
+}
