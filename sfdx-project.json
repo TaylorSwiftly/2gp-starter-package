@@ -2,11 +2,19 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "PURCHASE! Starter Package",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": ""
     }
   ],
   "name": "2GP Starter Package",
   "namespace": "YOUR_NS_PREFIX",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "59.0"
+  "sourceApiVersion": "59.0",
+  "packageAliases": {
+    "PURCHASE! Starter Package": "0HoRm00000000EXKAY",
+    "PURCHASE! Starter Package@0.1.0-1": "04tRm000000AXCPIA4"
+  }
 }
