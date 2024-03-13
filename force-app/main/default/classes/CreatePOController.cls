@@ -1,8 +1,8 @@
-/**
+/** 
  * @class       `CreatePOController`
  * @description This class is the controller for the Create Purchase Order page.
  */
-public class CreatePOController {
+public with sharing class CreatePOController { 
     /** @description A user-provided search string to filter the list of Vendors. */
     public String       searchString        {get; set;}
     /** @description The description of the goods or services being purchased. */
@@ -68,6 +68,7 @@ public class CreatePOController {
                                 WHERE       Name LIKE :escapedSearchString 
                                             OR 
                                             Id IN :selectedVendorIds
+                                WITH        USER_MODE
                                 ORDER BY    Name ASC
                                 LIMIT       20];
         } else {
@@ -118,7 +119,7 @@ public class CreatePOController {
             return null;
         }
         // Insert the list of new purchase orders
-        insert newPurchaseOrders;
+        insert as user newPurchaseOrders;
 
         // Display a success message
         ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.CONFIRM, 'Successfully created purchase order(s) for the following vendor(s): ' + String.join(vendorNames, ', ')));
@@ -140,6 +141,7 @@ public class CreatePOController {
     private List<Account> getDefaultVendorAccounts(Integer maxRecords) {
         return [SELECT      Id, Name, Phone, Website 
                 FROM        Account 
+                WITH        USER_MODE
                 ORDER BY    Name ASC
                 LIMIT       :maxRecords];
     }

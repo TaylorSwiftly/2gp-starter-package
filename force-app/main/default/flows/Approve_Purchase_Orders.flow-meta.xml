@@ -120,7 +120,7 @@
         <connector>
             <targetReference>DisplayUpdatedPurchaseRecords</targetReference>
         </connector>
-        <inputReference>SelectedPurchaseOrders.selectedRows</inputReference>
+        <inputReference>ApprovedPurchaseOrders</inputReference>
     </recordUpdates>
     <screens>
         <description>Display the collection of selected Purchase Orders and ask the user to confirm that these are the Purchase Orders they wish to approve.</description>
